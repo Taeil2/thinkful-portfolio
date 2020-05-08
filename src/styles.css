@@ -9,13 +9,9 @@ darken secondary - 388E3C
 
 */
 
-
-
-
-
 html {
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 18px;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -44,43 +40,24 @@ p, li {
   background: #1976D2;
 }
 
-/* Navigation and Page Structure */
-body {
-  display: flex;
-}
-nav {
-  width: 90px;
-  height: 100vh;
-  position: sticky;
-  top: 0;
-}
-main {
-  width: 100%;
-  opacity: 1;
-  transition: all 250ms linear;
-}
-main.hidden {
-  opacity: 0;
-}
-.wrapper {
-  margin: 0 auto;
-  padding: 20px 20px;
-  max-width: 1340px;
-}
-.wrapper > h1, .wrapper > h2 {
-  margin-top: 0;
-}
-
 /* Navigation */
-nav {
+.nav1, .nav2 {
+  position: fixed;
+  width: 100%;
   background: #37474F;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  z-index: 1;
+}
+.nav1 a, .nav2 a {
+  flex-grow: 1;
+  border: 0;
+  border-right: 1px solid #141b1f;
 }
 .nav1 {
+  top: 0;
 }
 .nav2 {
+  bottom: 0;
 }
 nav a {
   display: flex;
@@ -89,13 +66,7 @@ nav a {
   text-decoration: none;
   padding: 20px 10px;
   position: relative;
-  height: 70px;
-}
-.nav1 a {
-  border-bottom: 1px solid #141b1f;
-}
-.nav2 a {
-  border-top: 1px solid #141b1f;
+  height: 50px;
 }
 nav a * {
   color: #B0BEC5;
@@ -104,12 +75,12 @@ nav a:hover, nav a.active {
   background: #263238;
 }
 nav a i {
-  font-size: 28px;
+  font-size: 18px;
   text-shadow: 1px 1px 1px #263238;
   transition: all 250ms linear;
 }
 nav a div {
-  font-size: 12px;
+  font-size: 10px;
   position: absolute;
   width: 100%;
   text-align: center;
@@ -118,17 +89,138 @@ nav a div {
   margin-top: -5px;
   transition: all 250ms linear;
 }
-nav a:hover i {
+nav a:hover i, nav a.active i {
   margin-top: -15px;
 }
-nav a:hover div {
+nav a:hover div, nav a.active div {
   bottom: 10px;
   opacity: 1;
 }
 
+@media (min-width: 800px) {
+  body {
+    display: flex;
+  }
+  nav {
+    width: 90px;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    background: #37474F;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .nav1, .nav2 {
+    position: unset;
+    flex-direction: column;
+  }
+  .nav1 {
+  }
+  .nav2 {
+  }
+  .nav1 a, .nav2 a {
+    border: 0;
+  }
+  .nav1 a {
+    border-bottom: 1px solid #141b1f;
+  }
+  .nav2 a {
+    border-top: 1px solid #141b1f;
+  }
+  nav a {
+    height: 70px;
+  }
+  nav a i {
+    font-size: 28px;
+  }
+  nav a div {
+    font-size: 12px;
+  }
+}
+
+/* Main, background, and wrapper */
+main {
+  width: 100%;
+  opacity: 1;
+  transition: all 250ms linear;
+}
+main.hidden {
+  opacity: 0;
+}
+.background {
+  padding: 50px 0;
+  min-height: 100vh;
+}
+.wrapper {
+  margin: 0 auto;
+  padding: 20px;
+  min-height: calc(100vh - 100px);
+  max-width: 1340px;
+}
+.wrapper > h1, .wrapper > h2 {
+  margin-top: 0;
+}
+
+@media (min-width: 800px) {
+  .background {
+    padding: 0;
+  }
+  .wrapper {
+    min-height: 100vh;
+  }
+}
+
+
+
+/* Home Page */
+.home-page.background {
+  background: #212121;
+}
+.home-page .wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.home-page .intro {
+  text-align: center;
+}
+/*
+.home-page .wrapper {
+  max-width: 80%;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+*/
+.home-page h1 {
+  margin-top: 0;
+}
+.intro * {
+  color: #fff;
+}
+#animation {
+  width: 300px;
+  height: 300px;
+}
+
+/* About Page */
+.about-page.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #31355b;
+}
+.about-page .wrapper {
+  max-width: 900px;
+}
+.about-page * {
+  color: #fff;
+}
+
 /* Skills Page */
 .skills-page.background {
-  background: #CFD8DC;
+  background: rgb(231, 231, 231);
 }
 .skills-page .wrapper {
   max-width: 900px;
@@ -178,10 +270,13 @@ h2.hidden, .skill.hidden {
 
 /* Project Page */
 .project-page.background {
-
+  background: #4d827e;
 }
 .project-page .wrapper {
   max-width: 900px;
+}
+.project-page h3, .project-page p {
+  color: #fff;
 }
 .project {
   margin: 100px 0;
@@ -197,7 +292,7 @@ h2.hidden, .skill.hidden {
   width: 100%;
 }
 .project .description {
-  max-width: 60%;
+  max-width: 70%;
   margin: 0 auto;
   text-align: center;
 }
@@ -205,7 +300,24 @@ h2.hidden, .skill.hidden {
   display: inline-block;
   vertical-align: top;
   margin-left: 15px;
+  color: #fff;
 }
 .project .fa-github {
   font-size: 38px;
+  color: #fff;
+}
+.project .github-link:hover .fa-github {
+  color: #eee;
+}
+
+.project .content {
+  opacity: 1;
+  margin-top: 0;
+  padding-bottom: 0;
+  transition: all 400ms linear;
+}
+.project.hidden .content {
+  opacity: 0;
+  margin-top: -50px;
+  padding-bottom: 50px;
 }

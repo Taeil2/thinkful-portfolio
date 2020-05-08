@@ -24,7 +24,7 @@ const skills = {
 };
 
 const renderPage = function() {
-  let html = '<div class="skills-page background"><div class="wrapper"><h1>Skills</h1>';
+  let html = '<div class="skills-page background"><div class="wrapper">';
 
   for (let key in skills) {
     html += `<h2 class="hidden">${key}</h2><div class="skills-container">`;

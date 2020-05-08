@@ -7,18 +7,26 @@ import $ from 'jquery';
 import about from './about';
 import skills from './skills';
 import work from './work';
+import animation from './animation';
 
 const renderPage = function() {
   let html = `
     <div class="home-page background">
       <div class="wrapper home-page">
-        <h1>Hi, my name is Taeil Kwak and I am a UX designer and developer.</h1>
-        <h2>I like to create enjoyable and useable experiences.</h2>
+        <div class="intro">
+          <h1>Hi, my name is Taeil Kwak and I am a UX designer and developer.</h1>
+          <h3>I like to create enjoyable and useable experiences.</h3>
+        </div>
+        <div id="animation">
+        </div>
       </div>
     </div>
   `;
 
   $('main').html(html);
+
+  animation.init();
+  animation.animate();
 };
 
 const initializeNav = function() {
@@ -47,7 +55,7 @@ const initializeNav = function() {
   });
 
   $('#email-link').click(function(e) {
-    e.preventDefault();
+    // e.preventDefault();
   });
 };
 
