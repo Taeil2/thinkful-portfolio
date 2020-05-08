@@ -203,6 +203,11 @@ main.hidden {
   width: 300px;
   height: 300px;
 }
+@media (min-width: 800px) {
+  .home-page .wrapper {
+    flex-direction: row;
+  }
+}
 
 /* About Page */
 .about-page.background {
