@@ -2,6 +2,7 @@ import * as three from 'three';
 
 var camera, scene, renderer;
 var geometry, material, mesh;
+let animationRun = false;
 
 function init() {
   let container = document.getElementById('animation');
@@ -37,5 +38,6 @@ function animate() {
 
 export default {
   init,
-  animate
+  animate,
+  animationRun
 };

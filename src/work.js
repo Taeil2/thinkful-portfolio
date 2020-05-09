@@ -17,7 +17,7 @@ const projects = [{
   url: 'https://www.google.com',
   github: 'https://github.com/Taeil2/thinkful-portfolio',
   image: 'https://via.placeholder.com/500x300',
-  technologies: ['html', 'css'],
+  technologies: ['html', 'css', 'js'],
   skills: ['ux', 'development'],
 },
 {
@@ -26,7 +26,7 @@ const projects = [{
   url: 'https://www.google.com',
   github: 'https://github.com/Taeil2/thinkful-portfolio',
   image: 'https://via.placeholder.com/500x300',
-  technologies: ['html', 'css'],
+  technologies: ['html', 'css', 'js'],
   skills: ['ux', 'development'],
 }
 ];
@@ -47,6 +47,9 @@ const renderPage = function() {
             <img src="${project.image}" alt="${project.name} Screenshot">
             <div class="${project.technologies.map(technology => technology).join(' ')} ${project.skills.map(skill => skill).join(' ')}">
               <div class="technologies">
+                <i class="fab fa-html5"></i>
+                <i class="fab fa-css3-alt"></i>
+                <i class="fab fa-js"></i>
               </div>
               <div class="skills">
               </div>

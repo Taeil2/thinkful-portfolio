@@ -325,6 +325,14 @@ h2.hidden, .skill.hidden {
   margin-top: -50px;
   padding-bottom: 50px;
 }
+
+.project .technologies i {
+  font-size: 28px;
+  color: #a9cac7;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
 @media (min-width: 800px) {
   .project .description {
     max-width: 90%;

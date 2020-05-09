@@ -26,7 +26,10 @@ const renderPage = function() {
   $('main').html(html);
 
   animation.init();
-  animation.animate();
+  if (!animation.animationRun) { // object kept speeding up.
+    animation.animate();
+    animation.animationRun = true;
+  }
 };
 
 const initializeNav = function() {
