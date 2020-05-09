@@ -4,7 +4,7 @@ import quizAppImage from './img/projects/thinkful-quiz-app.png';
 
 const projects = [{
   name: 'Quiz App',
-  description: 'This Video Game History Quiz was written by Yousef and I. We complied 5 multiple choice questions about video game history. We choose this topic based on our common interests and wanted to make it fun/interesting. The technologies we used to build this app were HTML, CSS, and jQuery.',
+  description: 'This Video Game History Quiz was written by Yousef and I. We compiled 5 multiple choice questions about video game history. We choose this topic based on our common interests and wanted to make it fun/interesting. The technologies we used to build this app were HTML, CSS, and jQuery.',
   url: 'https://thinkful-ei-orka.github.io/Quiz-App_Taeil-Yousef/',
   github: 'https://github.com/thinkful-ei-orka/Quiz-App_Taeil-Yousef',
   image: quizAppImage,
@@ -75,8 +75,6 @@ const animatePage = function() {
   let projects = $('.project');
   let offset = 400;
 
-  let bottomPos = $(window).scrollTop() + $(window).height();
-
   setTimeout(function() {
     // fade in first project
     $('.project:first-of-type').removeClass('hidden');
@@ -84,10 +82,7 @@ const animatePage = function() {
     // fade in projects on scroll
     $(window).scroll(function() {
       let bottomPos = $(window).scrollTop() + $(window).height();
-      console.log(bottomPos);
-      console.log(projects);
       projects.each(function(i) {
-        console.log(projects[i]);
         if (projects[i].offsetTop < bottomPos - offset) {
           $(projects[i]).removeClass('hidden');
         }
