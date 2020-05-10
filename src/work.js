@@ -2,16 +2,17 @@ import $ from 'jquery';
 
 import quizAppImage from './img/projects/thinkful-quiz-app.png';
 
+// Description: What does the app do? Who is it for? Why did you build it?
 const projects = [{
   name: 'Quiz App',
-  description: 'This Video Game History Quiz was written by Yousef and I. We compiled 5 multiple choice questions about video game history. We choose this topic based on our common interests and wanted to make it fun/interesting. The technologies we used to build this app were HTML, CSS, and jQuery.',
+  description: 'Test your video game history knowledge with this video game history quiz. This was a quick multiple choice quiz app written for my Thinkful course to demonstrate practice of semantic HTML, CSS, JavaScript, and jQuery.',
   url: 'https://thinkful-ei-orka.github.io/Quiz-App_Taeil-Yousef/',
   github: 'https://github.com/thinkful-ei-orka/Quiz-App_Taeil-Yousef',
   image: quizAppImage,
   technologies: ['html', 'css', 'jquery'],
   skills: ['development'],
 },
-{
+/*{
   name: 'Placeholder Project',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   url: 'https://www.google.com',
@@ -28,7 +29,7 @@ const projects = [{
   image: 'https://via.placeholder.com/500x300',
   technologies: ['html', 'css', 'js'],
   skills: ['ux', 'development'],
-}
+}*/
 ];
 
 const renderPage = function() {
