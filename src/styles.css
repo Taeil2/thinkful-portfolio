@@ -227,6 +227,10 @@ main.hidden {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
 }
 .skill {
   flex: 1 0 40%;

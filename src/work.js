@@ -42,7 +42,7 @@ const renderPage = function() {
     }
 
     html += `
-      <div class="project hidden">
+      <section class="project hidden">
         <div class="content">
           <div class="image">
             <img src="${project.image}" alt="${project.name} Screenshot">
@@ -65,7 +65,7 @@ const renderPage = function() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     `;
   });
   html += '</div></div>';

@@ -27,17 +27,17 @@ const renderPage = function() {
   let html = '<div class="skills-page background"><div class="wrapper">';
 
   for (let key in skills) {
-    html += `<h2 class="hidden">${key}</h2><div class="skills-container">`;
+    html += `<section><h2 class="hidden">${key}</h2><ul class="skills-container">`;
     skills[key].forEach((skill) => {
       html += `
-        <div class="skill hidden">
+        <li class="skill hidden">
           <div class="image-container ${skill[2]}">
             <img src="${skill[1]}" alt="${skill[0]} Logo">
           </div>
           <div class="title">${skill[0]}</div>
-        </div>`;
+        </li>`;
     });
-    html += '</div>';
+    html += '</ul></section>';
   }
 
   html += '</div></div>';
