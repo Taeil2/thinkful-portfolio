@@ -20,7 +20,7 @@ import phpImage from './img/tech-logos/php.svg';
 const skills = {
   Web: [['HTML', htmlImage, 'tall'], ['CSS', cssImage, 'tall'], ['SASS', sassImage, 'square'], ['Bootstrap', bootstrapImage, 'square']],
   JavaScript: [['JavaScript', javascriptImage, 'tall'], ['jQuery', jqueryImage, 'square'], ['React', reactImage, 'square'], ['Angular', angularImage, 'tall'], ['Node.js', nodejsImage, 'square'], ['npm', npmImage, 'wide'], ['Webpack', webpackImage, 'square']],
-  Other: [['Github', githubImage, 'square'], ['Wordpress', wordpressImage, 'square'], ['php', phpImage, 'wide']]
+  Other: [['GitHub', githubImage, 'square'], ['WordPress', wordpressImage, 'square'], ['php', phpImage, 'wide']]
 };
 
 const renderPage = function() {
